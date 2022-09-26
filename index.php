@@ -52,14 +52,13 @@ $shop = 'osama-cloth';
 //     }
 // }
 // ?>
-// <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-// <script src="js/script.js"></script> -->
-// <form method="post" style="margin-top: 50px">
-//     <label for="">Field: </label><br>
-//     <input type="text" name="test_field" id="test_field"><br></br>
-//     <input name="submit" type="submit" value="Submit">
-// </form>
-// <?php 
+ <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <form method="post" style="margin-top: 50px">
+     <label for="">Field: </label><br>
+     <input type="text" name="test_field" id="test_field"><br></br>
+     <input name="submit" type="submit" value="Submit">
+ </form> -->
+<?php 
 
 // if(isset($_POST['submit'])){
 //     echo $_POST['test_field'];
@@ -74,3 +73,17 @@ $shop = 'osama-cloth';
 // );
 // $script_tag = shopify_call($token, $shop, "/admin/api/2022-07/script_tags.json", $script_array, 'POST');
 // $script_tag = json_decode($script_tag['response'], JSON_PRETTY_PRINT);
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopify Example App</title>
+</head>
+<body>
+	<h1>Shopify App Example</h1>
+	<input type="text" id="search" name="search" placeholder="Search for item">
+	<input type="hidden" id="subdomain" name="subdomain" value="<?php echo $shop; ?>">
+	<div id="products"></div>
+</body>
+</html>
