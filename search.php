@@ -5,7 +5,7 @@ require_once("inc/connection.php");
 $html = '';
 $search_term = $_POST['term'];
 $shop = $_POST['subdomain'];
-$token = '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'; 
+$token = $row['access_token'];
 
 $array = array(
     'fields' => 'id,title'
