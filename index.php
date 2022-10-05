@@ -1,9 +1,3 @@
-<?php
-require_once("inc/functions.php");
-require_once("inc/connection.php");
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,17 +10,19 @@ require_once("inc/connection.php");
 
 	<div class="container">
 		<?php
-		require_once("inc/functions.php");
-		require_once("inc/connection.php");
-		require_once("header.php");
-		require_once("products.php");
+		include_once("inc/connection.php");
+		include_once("header.php");
+		include_once("inc/functions.php");
+		include_once("products.php");
 		?>
 	</div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
+
     <script>
+      var shop = '<?php echo $shop; ?>';
 
       $('div[product-id]').on('click', function (e) {
         $.ajax({
