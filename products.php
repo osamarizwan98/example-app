@@ -1,11 +1,8 @@
 <div class="card-columns">
 <?php
-echo $shop_url;
 $products = shopify_call($token, $shop_url, "/admin/api/2022-10/products.json", array(), 'GET');
 $products = json_decode($products['response'], JSON_PRETTY_PRINT);
 
-print_r($products);
-exit();
 
 foreach ($products as $product) {
 	foreach ($product as $key => $value) {
