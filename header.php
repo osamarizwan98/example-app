@@ -14,6 +14,6 @@ if (mysqli_num_rows($result) < 1) {
 else{
     $row    = mysqli_fetch_assoc($result);
     $token = $row['access_token'];
-    $shop = $requests["shop"];
-    $shop_url = 'osama-cloth';
+    $shop_url = $requests["shop"];
+    // $shop_url = 'osama-cloth';
 }

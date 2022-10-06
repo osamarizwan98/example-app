@@ -10,7 +10,7 @@ foreach ($products as $product) {
 		$images  = json_decode($images['response'], JSON_PRETTY_PRINT);
 		?>
 
-			<div class="card" product-id="<?php echo $value['id']; ?>">
+			<div class="card" data-toggle="modal" data-target="#productsModal" product-id="<?php echo $value['id']; ?>">
 				<img class="card-img-top" src="<?php echo $images['images'][0]['src']; ?>" alt="Card image cap">
 				<div class="card-body">
 					<h5 class="card-title"><?php echo $value['title']; ?></h5>

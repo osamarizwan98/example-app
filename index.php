@@ -22,8 +22,7 @@
 
 
     <script>
-      var shop = '<?php echo $shop; ?>';
-
+      var shop = '<?php echo $shop_url; ?>';
       $('div[product-id]').on('click', function (e) {
         $.ajax({
           method: 'POST',
